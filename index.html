@@ -1,1 +1,35 @@
-Hello
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #typing-text {
+      font-size: 30px;
+      white-space: pre;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+  </style>
+</head>
+<body style="background-color: rgb(31, 31, 31); color: rgb(255, 255, 255);">
+  <div id="typing-text"></div>
+  
+  <script>
+    const text = 'Hello 👋, I am Thomas a Student and Programmer from Czech Republic!\nSecond <a href="https://www.google.com">Google</a>';
+    let i = 0;
+    
+    function type() {
+      if (i < text.length) {
+        document.getElementById("typing-text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 50);
+      }
+    }
+    
+    type();
+  </script>
+</body>
+</html>
