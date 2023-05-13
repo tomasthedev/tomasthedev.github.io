@@ -55,43 +55,8 @@
   </style>
 </head>
 <body style="background-color: rgb(31, 31, 31); color: rgb(255, 255, 255);">
-  <div id="typing-text"></div>
-  
-  <script>
-    const text = 'Hello 👋, I am Thomas a Student and Programmer from Czech Republic!\nI interested in these things: Discord Bots and Deep Learning\n\nThere is my few projects:\n<a id="abutton" href="work-progress.html">FreeAI - Service that will provide free API requests with AI responses</a>\n<a id="abutton" target="_blank" href="https://github.com/tommarekCZE/OpenAI-Discord-Bot">OpenAI Discord Bot - Discord bot that makes API requests to OpenAI API for getting the responses, images and much more!</a>\n<a id="abutton" target="_blank" href="https://top.gg/bot/1063768690945970226">Simple Chat Bot - Discord bot that uses Random Stuff API to generate conversation between user and bot</a>\n<a id="abutton" href="work-progress.html">Simple Design Bot - Discord bot that can create Design profile for your server that you can later load or share with others! Aslo you can load others Design!</a>\n\nFolow me on <a id="bbutton" target="_blank" href="https://twitter.com/tommarek_CZ">Twitter</a>, also you can join to my <a id="bbutton" target="_blank" href="https://discord.gg/cywYb2Ng4Q">Discord Server</a>\n\n(Check <a id="bbutton" target="_blank" href="https://discord.com/invite/XbkmqxDvms">this Awesome Discord Server</a> for programmers by rony)';
-    let i = 0;
-    
-    function type() {
-      if (i < text.length) {
-        if (text.charAt(i) === "<") {
-          j = text.indexOf(">", i) + 1;
-          document.getElementById("typing-text").innerHTML = text.substring(0, j);
-          i = j;
-          setTimeout(type, 200);
-        } else {
-          document.getElementById("typing-text").innerHTML = text.substring(0, i + 1);
-          i++;
-          setTimeout(type, 50);
-        }
-      }
-    }
-    
-    type();
-  </script>
-
-<script>
-  window.onload = function() {
-    console.log(`
-.___   _____                                                       .__            ____        __   .__     .__                                      _____                          .___                                           __   ._. 
-|   |_/ ____\     ___.__.  ____   __ __       ______  ____   ____  |__|  ____    / ___\     _/  |_ |  |__  |__|  ______     ___.__.  ____   __ __     _/ ____\____   __ __   ____    __| _/      ______  ____   ____ _______   ____ _/  |_ | | 
-|   |\   __\     <   |  | /  _ \ |  |  \     /  ___/_/ __ \_/ __ \ |  | /    \  / /_/  >    \   __\|  |  \ |  | /  ___/    <   |  | /  _ \ |  |  \    \   __\/  _ \ |  |  \ /    \  / __ |      /  ___/_/ __ \_/ ___\\_  __ \_/ __ \\   __\| | 
-|   | |  |        \___  |(  <_> )|  |  /     \___ \ \  ___/\  ___/ |  ||   |  \ \___  /      |  |  |   Y  \|  | \___ \      \___  |(  <_> )|  |  /     |  | (  <_> )|  |  /|   |  \/ /_/ |      \___ \ \  ___/\  \___ |  | \/\  ___/ |  |   \| 
-|___| |__|        / ____| \____/ |____/     /____  > \___  >\___  >|__||___|  //_____/       |__|  |___|  /|__|/____  >     / ____| \____/ |____/      |__|  \____/ |____/ |___|  /\____ |     /____  > \___  >\___  >|__|    \___  >|__|   __ 
-                  \/                             \/      \/     \/          \/                          \/          \/      \/                                                  \/      \/          \/      \/     \/             \/        \/ 
-                                                                                                                                                                                                                                               `);
-  }
-</script>
-
+  <div id="">
+  </div>
 
 </body>
 </html>
