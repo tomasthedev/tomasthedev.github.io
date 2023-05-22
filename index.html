@@ -14,49 +14,109 @@
   <meta name="keywords" content="tommarek, AI, Tomáš, Marek, Portfolio">
   <meta name="author" content="Tomáš Marek">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    #abutton:link, #abutton:visited {
-      color: rgb(78, 94, 167);
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: large;
-    }
-
-    #abutton:hover, #abutton:active {
-      color: rgb(63, 132, 223);
-      font-size: large;
-      text-decoration-line: underline;
-      }
-
-      #bbutton:link, #bbutton:visited {
-      color: rgb(78, 94, 167);
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    #bbutton:hover, #bbutton:active {
-      color: rgb(63, 132, 223);
-      text-decoration-line: underline;
-      }
-
-    #typing-text {
-      font-size: 30px;
-      white-space: pre;
-      overflow: hidden;
-      width: 100%;
-    }
-
-    *{
-        font-family: 'Courier New', Courier, monospace;
-    }
-  </style>
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
-<body style="background-color: rgb(31, 31, 31); color: rgb(255, 255, 255);">
-  <div id="">
+<body>
+  <div class="card-container">
+    <div class="card" id="center">
+      <div class="card-header">
+        <div class="banner"></div>
+      </div>
+      <div class="card-body">
+        <div class="profile-header">
+          <div class="profil-logo">
+            <img src="./assets/img/logo.png" />
+          </div>
+          <div class="badges-container">
+            <div class="badge-item">
+              <img src="./assets/img/badges/bravery.webp" alt="" />
+              <div class="tooltip tooltip-up">HypeSquad Bravery</div>
+            </div>
+            <div class="badge-item">
+              <img src="./assets/img/badges/botcreator.png" alt="" />
+              <div class="tooltip tooltip-up">Bot Developer</div>
+            </div>
+          </div>
+        </div>
+        <div class="profile-body">
+          <div class="username">
+            Sybrax<span>#3098</span>
+            <div class="badge">Bot</div>
+          </div>
+          <hr />
+          <a href="https://sybraxdesign.fr/" target="_blank" class="btn">A button !</a>
+          <div class="basic-infos">
+            <div class="category-title">About Me</div>
+            <p>Your about me description.</p>
+          </div>
+          <div class="basic-infos">
+            <div class="category-title">Member Since</div>
+            <p>Jun 14, 2017</p>
+          </div>
+          <div class="roles">
+            <div class="category-title">Roles</div>
+            <div class="roles-list">
+              <div class="role">
+                <div class="role-color" style="background: orange"></div>
+                <p>Role title</p>
+              </div>
+              <div class="role">
+                <div class="role-color" style="background: violet"></div>
+                <p>A long role title</p>
+              </div>
+              <div class="role">
+                <div class="role-color" style="background: green"></div>
+                <p>A very very very very long role title</p>
+              </div>
+              <div class="role">
+                <div class="role-color" style="background: yellow"></div>
+                <p>Role title</p>
+              </div>
+              <div class="role">
+                <div class="role-color" style="background: yellowgreen"></div>
+                <p>Role title</p>
+              </div>
+              <div class="role">
+                <div class="role-color" style="background: turquoise"></div>
+                <p>Role title</p>
+              </div>
+              <div class="role role-add">
+                <div class="role-add-text">+</div>
+              </div>
+            </div>
+          </div>
+          <div class="note">
+            <div class="category-title">Note</div>
+            <textarea placeholder="Click for add a note"></textarea>
+          </div>
+          <div class="message">
+            <input type="text" placeholder="Send a message to @Sybrax" />
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- Elements below can be removed ( they are just for the demo ) -->
+  <div class="modal-container">
+    <div class="modal">
+      <div class="modal-header">
+        Modal open! Any question ?
+        <a href="https://discord.gg/dJFFpaQ" target="_blank"
+          >Join our Discord</a
+        >
+        or visit our
+        <a href="https://sybraxdesign.fr" target="_blank">website</a> :)
+      </div>
+      <div class="modal-body">
+        <input
+          id="feedback-input"
+          type="text"
+          placeholder="Send feedback ( optional )..."
+        />
+        <div class="feedback-state"></div>
+      </div>
+    </div>
   </div>
-
+  <div class="help-btn">?</div>
+  <script src="./assets/js/demo.js"></script>
 </body>
 </html>
