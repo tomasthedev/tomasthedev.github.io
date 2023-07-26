@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @font-face {
+      font-family: "emoji";
+      src: url("https://xem.github.io/unicode13/Twemoji.ttf") format("truetype");
+      unicode-range: U+00A9-E007F;
+    }
+
+
+    * {
+      text-align: center;
+      font-family: "emoji", 'Courier New', Courier, monospace;
+    }
+
+    body {
+      background-color: rgb(20, 20, 20);
+      color: white;
+    }
+
+    #overlay {
+        position: fixed;
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0,0,0,0.5);
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    #text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 50px;
+        color: rgb(190, 34, 34);
+        transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        text-shadow:
+            0 0 5px #ff0000,
+            0 0 10px #ff0000,
+            0 0 20px #ff0000,
+            0 0 40px rgb(255, 0, 0),
+            0 0 80px rgb(255, 0, 0),
+            0 0 90px rgb(255, 0, 0),
+            0 0 100px rgb(255, 0, 0),
+            0 0 150px rgb(255, 0, 0);
+        }
+  </style>
+  <title>Mini Launcher</title>
+</head>
+<body>
+  <div id="overlay">
+    <div id="text">Working in progress!</div>
+  </div>
+      
+  <h1>Mini Launcher</h1>
+  <h3>Minimalistic Launcher for Android</h3>
+  <img width="350" height="700" src="../files/S30726-12122175_google-pixel4-justblack-portrait.png">
+</body>
+</html>
+
+<!--https://mockuphone.com/device/google-pixel4-justblack-->
