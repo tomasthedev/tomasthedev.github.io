@@ -3,12 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">¨
-      <meta property="og:image" content="https://raw.githubusercontent.com/tommarekCZE/tommarekcze.github.io/f559e70bfbcf74c0b8dc63026a7ac2b1b0861eb2/files/OIP.gif">
-      <meta property="og:type" content="video.other">
-      <meta property="og:video:url" content="https://cdn.discordapp.com/attachments/1075555063025643540/1157680675760132106/smileforthecamerapayacho_1.mp4?ex=65197da5&is=65182c25&hm=f7ee3820fa2d7ca239b4ab42a2bdd79563c9800ec80c77e967a3ea449a0349d3&">
-      <meta property="og:video:height" content="202">
-      <meta property="og:video:width" content="250">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <style>
     @font-face {
       font-family: "emoji";
@@ -25,25 +21,91 @@
       background-color: rgb(20, 20, 20);
       color: white;
     }
+
+    .container {
+      width: 95%;
+      max-width: 1160px;
+      margin: auto;
+    }
+
+    .animated-heading {
+      text-align: center;
+      height: 100vh;
+    }
+
+    h1 {
+        color: #ff5e5e;
+        font-weight: 900;
+    }
+
+    h2 {
+        color: #00a1a1;
+        font-weight: 600;
+    }
+
+    span#words {
+        font-weight: bolder;
+    }
+
+    /* Styling pro animaci textu */
+    .hidden-text1 {
+        display: none;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    /* Styling pro animaci ikony */
+    .icon1 {
+        font-size: 20px;
+        margin-left: 5px;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
   </style>
   <title>tommarek's Portfolio</title>
 </head>
 <body>
-  <h1>Hello, I am Thomas</h1>
-  <h3>> Czech Student &#x1F1E8;&#x1F1FF;</h3>
-  <h3>> Programmer &#x1F468;&#x200D;&#x1F4BB;</h3>
-  <h3>> Scout &#x269C;</h3>
-  <br>
-  <h2>Programming Knowledge</h2>
-  <h3>> Python &#x1F40D; - 2 Years</h3>
-  <h3>> Lua (Roblox) &#x1F9F1; - 3 Years</h3>
-  <h3>> CSHARP &#x00A9;  - 3 Years</h3>
-  <h3>> C++ (Arduino) &#x1F5A5; - 3 Years;</h3> 
-  <h3>> HTML/CSS &#x1F4F0; - 2 Years;</h3>
-  <br>
-  <h2>Projects</h2>
-  <p>> Working on...</p>
-  <img src="https://github-readme-stats.vercel.app/api?username=tommarekCZE&show_icons=true&border_color=141414&bg_color=141414&text_color=FFFFFF" style="position:absolute; width:auto; height:auto; top:30px; right:30px;">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=tommarekCZE&show_icons=true&border_color=141414&bg_color=141414&text_color=FFFFFF" style="position:absolute; width:auto; height:auto; top:250px; right:30px;">
+  <div class="row-outer">
+    <div class="container">
+      <div class="animated-heading">
+        <h1>Hi, I'm Thomas, a <span id="words">UI Designer</span></h1>
+        <h2>aka tommarek (Czech Student &#x1F1E8;&#x1F1FF;)</h2><br>
+        <h2 onclick="toggleText1()">My knowledge / Interests <span class="icon1">></span></h2>
+        <h3 class="hidden-text1" id="remaining-text1">Python &#x1F40D;<br>C#, WPF App Development &#x1FA9F;<br>Arduino (ESP32) Development &#x1F539;<br>Computer Hardware &#x1F5A5;<br>Server Hosting &#x1F415;&#x200D;&#x1F9BA;<br>Radio Amateuring &#x1F4FB;<br>HTML &#x1F4C4;</h3>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+    (function () {
+      var words = ["UI Designer","App Developer","AI Enthusiast","Hardware Fanatic","Freelancer","Future Officer"],
+      i = 0;
+      setInterval(function(){ $('#words').fadeOut(function(){
+          $(this).html(words[(i = (i + 1) % words.length)]).fadeIn();
+        }); }, 3000)
+    })();
+  </script>
+
+  <script>
+    let textVisible1 = false;
+
+    function toggleText1() {
+        const hiddenText1 = document.getElementById('remaining-text1');
+        textVisible1 = !textVisible1;
+
+        if (textVisible1) {
+            hiddenText1.style.display = 'block';
+            document.querySelector('.icon1').textContent = 'v'; // Změna ikony na 'v'
+        } else {
+            hiddenText1.style.display = 'none';
+            document.querySelector('.icon1').textContent = '>'; // Změna ikony zpět na '>'
+        }
+    }
+  </script>
 </body>
 </html>
