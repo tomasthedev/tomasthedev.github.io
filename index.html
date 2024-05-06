@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <style>
     @font-face {
       font-family: "emoji";
@@ -47,13 +48,11 @@
         font-weight: bolder;
     }
 
-    /* Styling pro animaci textu */
     .hidden-text1 {
         display: none;
         animation: fadeIn 1s ease-in-out;
     }
 
-    /* Styling pro animaci ikony */
     .icon1 {
         font-size: 20px;
         margin-left: 5px;
@@ -67,20 +66,96 @@
             opacity: 1;
         }
     }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: 10px;
+        background-color: #333;
+        color: white;
+    } 
+
+    .social {
+      position: fixed;
+      top: 20px;
+    }
+    .social ul {
+      padding: 0px;
+      transform: translate(-270px, 0);
+    }
+    .social ul li {
+      display: block;
+      margin: 5px;
+      background: rgba(0, 0, 0, 0.36);
+      width: 300px;
+      text-align: right;
+      padding: 10px;
+      border-radius: 0 30px 30px 0;
+      transition: all 1s;
+    }
+    .social ul li:hover {
+      transform: translate(110px, 0);
+      background: rgba(255, 255, 255, 0.4);
+    }
+    .social ul li:hover a {
+      color: #ffffff;
+    }
+    .social ul li:visited a {
+      color: #333;
+    }
+    .social ul li a {
+      color: #333;
+    }
+    .social ul li:hover i {
+      color: #fff;
+      background: rgba(0, 0, 0, 0.36);
+      transform: rotate(360deg);
+      transition: all 1s;
+    }
+    .social ul li i {
+      margin-left: 10px;
+      color: #000;
+      background: #fff;
+      padding: 10px;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+      background: #ffffff;
+      transform: rotate(0deg);
+    }
   </style>
   <title>tommarek's Portfolio</title>
 </head>
 <body>
+  <nav class="social">
+
+    <ul>
+      <li><a href="https://www.youtube.com/channel/UCSSpWDOd37CnbR5sfzdTv0A">Youtube<i class="fa fa-youtube"></i></a></li>
+      <li><a href="https://github.com/tommarekCZE">Github<i class="fa fa-github"></i></a></li>
+      <li><a href="https://buymeacoffee.com/tommarek">Dontate &#x2764;<i class="fa fa-coffee"></i></a></li>
+    </ul>
+  </nav>
   <div class="row-outer">
     <div class="container">
       <div class="animated-heading">
         <h1>Hi, I'm Thomas, a <span id="words">UI Designer</span></h1>
         <h2>aka tommarek (Czech Student &#x1F1E8;&#x1F1FF;)</h2><br>
+        <h2>About me</h3>
+        <h3>Hi yall! I am tommarek (Thomas) and I am developer. I mostly develop some applications and mainly doing cool arduino projects. Also I am interested in computer hardware and wanna build my AI rig. I got some experience with hosting little servers on my hardware. I am also freelancer, if you wanna hire me, message me on discord: tommarek or gmail!</h3><br>
         <h2 onclick="toggleText1()">My knowledge / Interests <span class="icon1">></span></h2>
-        <h3 class="hidden-text1" id="remaining-text1">Python &#x1F40D;<br>C#, WPF App Development &#x1FA9F;<br>Arduino (ESP32) Development &#x1F539;<br>Computer Hardware &#x1F5A5;<br>Server Hosting &#x1F415;&#x200D;&#x1F9BA;<br>Radio Amateuring &#x1F4FB;<br>HTML &#x1F4C4;</h3>
+        <h3 class="hidden-text1" id="remaining-text1">Software Enginering &#x2699;<br>Python &#x1F40D;<br>C#, WPF App Development &#x1FA9F;<br>Arduino (ESP32) Development &#x1F539;<br>Computer Hardware &#x1F5A5;<br>Server Hosting &#x1F415;&#x200D;&#x1F9BA;<br>Radio Amateuring &#x1F4FB;<br>HTML &#x1F4C4;</h3>
       </div>
     </div>
   </div>
+
+  <footer id="footer1">
+    <h3 style="font-weight: 600;">Created by tommarek with &#x2764; <a onclick="delFooter()" style="color: red; text-align: right;">[close]<a/></h3>
+  </footer>
+
   <script type="text/javascript">
     (function () {
       var words = ["UI Designer","App Developer","AI Enthusiast","Hardware Fanatic","Freelancer","Future Officer"],
@@ -100,11 +175,15 @@
 
         if (textVisible1) {
             hiddenText1.style.display = 'block';
-            document.querySelector('.icon1').textContent = 'v'; // Změna ikony na 'v'
+            document.querySelector('.icon1').textContent = 'v';
         } else {
             hiddenText1.style.display = 'none';
-            document.querySelector('.icon1').textContent = '>'; // Změna ikony zpět na '>'
+            document.querySelector('.icon1').textContent = '>';
         }
+    }
+
+    function delFooter() {
+      document.getElementById("footer1").remove();
     }
   </script>
 </body>
